@@ -1,5 +1,5 @@
-G2GML Documentation
-===================
+X2 Documentation
+================
 
 .. toctree::
    :maxdepth: 2
