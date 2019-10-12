@@ -5,3 +5,6 @@ X2 Documentation
    :maxdepth: 2
 
    contents/get-started
+   contents/x2-server
+   contents/x2-api
+
