@@ -45,6 +45,10 @@ db:
     host: "http://localhost"
     port: 7474
     query: true
+    auth:
+      name: "neo4j"
+      password: "neo4jtest"
+      credential: ""
 web:
     port: 3000
 ```
@@ -55,5 +59,9 @@ web:
   * host(string): A hostname which backend DBMS serves.
   * port(integer): A port for the backend DBMS. (Neo4j serves 7474 in default.)
   * query(boolean): Whether debugging queries are permitted.
+  * auth(optional): Authentication
+    * name: User name (unsupported)
+    * password: Password (unsupported)
+    * credential: A credential for basic auth.
 * web:
   * port(integer): A port for serving web server. (Default: 3000)
