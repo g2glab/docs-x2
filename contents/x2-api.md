@@ -2,8 +2,8 @@
 
 ## Overview
 
-* X2-API defines a set of functions for visualizing graphs.
-* PG-format is a return value of X2-API.
+* X2-API defines a set of endpoints with collected useful queries for visualizing graphs.
+* Every endpoints return a property graph exchange format called PG-JSON, by converting various outputs of graph databases.
 
 ## Interface
 

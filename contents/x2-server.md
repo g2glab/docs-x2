@@ -48,3 +48,12 @@ db:
 web:
     port: 3000
 ```
+
+* db:
+  * dbms(string): A backend graph database, i.e., "neo4j" or "pgx" (currently unsupported except for neo4j).
+  * protocol(string): A way to connect to the backend graph, i.e., "http" or "bolt" or "java" (currently unsupported except for http).
+  * host(string): A hostname which backend DBMS serves.
+  * port(integer): A port for the backend DBMS. (Neo4j serves 7474 in default.)
+  * query(boolean): Whether debugging queries are permitted.
+* web:
+  * port(integer): A port for serving web server. (Default: 3000)
