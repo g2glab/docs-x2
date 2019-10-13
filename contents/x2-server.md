@@ -2,16 +2,16 @@
 
 ## Overview
 
-X2-server provides an official REST-API server which supports X2-API.
+The X2-server provides an official REST-API server which supports the X2-API.
 
 ## Quick Start
 
-Before running X2-server, backend server (Neo4j) is required to run.
+In order to run the X2-server, Neo4j is required to run as a backend server.
 
 Pull and run Neo4j Docker container.
 
 ```bash
-mkdir -p $HOME/work/x2/neo4j/data # Add data about neo4j.
+mkdir -p $HOME/work/x2/neo4j/data # Add data-directory for neo4j
 docker run \
   --publish=7474:7474 --publish=7687:7687 \
   --volume=$HOME/work/x2/neo4j/data:/data \
@@ -30,13 +30,13 @@ yarn build
 yarn start
 ```
 
-Access to `http://localhost:3000/`.
+Access on `http://localhost:3000/`.
 
 `http://localhost:3000/api-docs` provides a swagger-UI of this API definition.
 
 ## Configuration
 
-`config/default.yaml` is the configuration file.
+`config/default.yaml` is the main configuration file (Docker-compose).
 
 ```yaml
 db:
@@ -54,14 +54,14 @@ web:
 ```
 
 * db:
-  * dbms(string): A backend graph database, i.e., "neo4j" or "pgx" (currently unsupported except for neo4j).
-  * protocol(string): A way to connect to the backend graph, i.e., "http" or "bolt" or "java" (currently unsupported except for http).
-  * host(string): A hostname which backend DBMS serves.
-  * port(integer): A port for the backend DBMS. (Neo4j serves 7474 in default.)
-  * query(boolean): Whether debugging queries are permitted.
+  * dbms(string): Backend graph database (currently only neo4j is supported)
+  * protocol(string): Protocol for connecting to the backend DBMS (currently only http is supported)
+  * host(string): Backend DBMS hostname
+  * port(integer): Backend DBMS port (Neo4j: 7474 (default))
+  * query(boolean): Permitting debugging queries
   * auth(optional): Authentication
     * name: User name (unsupported)
     * password: Password (unsupported)
-    * credential: A credential for basic auth.
+    * credential: Credentials for basic auth
 * web:
-  * port(integer): A port for serving web server. (Default: 3000)
+  * port(integer): Web server port (default: 3000)
