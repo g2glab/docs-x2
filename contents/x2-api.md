@@ -3,7 +3,8 @@
 ## Overview
 
 * X2-API defines a set of endpoints with collected useful queries for visualizing graphs.
-* Every endpoints return a property graph exchange format called PG-JSON, by converting various outputs of graph databases.
+* X2 converts the output of queries into various graph database formats, including Neo4j, to a property graph exchange format called JSON-PG. 
+* When an endpoint receives a request, the endpoint queries against the backend graph database with preset queries and then returns the JSON-PG format to the client.
 
 ## Interface
 
@@ -21,7 +22,7 @@
   * [/edge_match?edge-id[]="id"]
   * [/edge_match?edge-label[]="label"]
   * [/edge_match?edge-prop[]="key;value"]
-* GET /traversal: To retrieve subgraphs by traversing from subgraphs which consist of specified edges.
+* GET /traversal: To retrieve a subgraph from another subgraph that consists of specified edges by traversing up to a given depth.
   * [/traversal?node-id[]="id"&iteration=2]
   * [/traversal?node-label[]="label"&iteration=2]
   * [/traversal?node-prop[]="key;value"&iteration=2]
