@@ -9,28 +9,32 @@
 ## Interface
 
 * GET /node_match: To retrieve subgraphs which consist of specified nodes.
-  * [/node_match?node-id[]="id"]
-  * [/node_match?node-label[]="label"]
-  * [/node_match?node-prop[]="key;value"]
-  * [/node_match?edge-id[]="id"]
-  * [/node_match?edge-label[]="label"]
-  * [/node_match?edge-prop[]="key;value"]
+  * [/node_match?node_ids[]="id"]
+  * [/node_match?node_labels[]="label"]
+  * [/node_match?node_props[]="key;value"]
+  * [/node_match?edge_ids[]="id"]
+  * [/node_match?edge_labels[]="label"]
+  * [/node_match?edge_props[]="key;value"]
 * GET /edge_match: To retrieve subgraphs which consist of specified edges.
-  * [/edge_match?node-id[]="id"]
-  * [/edge_match?node-label[]="label"]
-  * [/edge_match?node-prop[]="key;value"]
-  * [/edge_match?edge-id[]="id"]
-  * [/edge_match?edge-label[]="label"]
-  * [/edge_match?edge-prop[]="key;value"]
+  * [/edge_match?node_ids[]="id"]
+  * [/edge_match?node_labels[]="label"]
+  * [/edge_match?node_props[]="key;value"]
+  * [/edge_match?edge_ids[]="id"]
+  * [/edge_match?edge_labels[]="label"]
+  * [/edge_match?edge_props[]="key;value"]
 * GET /traversal: To retrieve a subgraph from another subgraph that consists of specified edges by traversing up to a given depth.
-  * [/traversal?node-id[]="id"&iteration=2]
-  * [/traversal?node-label[]="label"&iteration=2]
-  * [/traversal?node-prop[]="key;value"&iteration=2]
-  * [/traversal?edge-id[]="id"&iteration=2]
-  * [/traversal?edge-label[]="label"&iteration=2]
-  * [/traversal?edge-prop[]="key;value"&iteration=2]
+  * [/traversal?node_ids[]="id"&iteration=2]
+  * [/traversal?node_labels[]="label"&iteration=2]
+  * [/traversal?node_props[]="key;value"&iteration=2]
+  * [/traversal?edge_ids[]="id"&iteration=2]
+  * [/traversal?edge_labels[]="label"&iteration=2]
+  * [/traversal?edge_props[]="key;value"&iteration=2]
+* GET /profile: Fetch metadata of the graph
+  * [/profile?profile_type="node"]  -- A list of node labels.
+  * [/proifle?profile_type="edge"]  -- A list of edge labels.
 * GET /query: To query to the backend DBMS directly (For debugging).
   * [/query?q=""]
+
 
 See swagger API of X2-server in detail.
 
