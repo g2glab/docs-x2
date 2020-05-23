@@ -29,6 +29,10 @@
   * [/traversal?edge_ids[]="id"&iteration=2]
   * [/traversal?edge_labels[]="label"&iteration=2]
   * [/traversal?edge_props[]="key;value"&iteration=2]
+* GET /compute/shortest: To retrieve a shortest path from another subgraph that 
+  * [/compute/shortest?iteration=2&limit=1000&from_node_id="from_id"&to_node_id="to_id"]
+  * [/compute/shortest?iteration=2&limit=1000&from_node_label="from_label"&to_node_label="to_label"]
+  * [/compute/shortest?iteration=2&limit=1000&from_node_props[]="key;value"&to_node_props[]="key;value"]
 * GET /profile: Fetch metadata of the graph
   * [/profile?profile_type="node"]  -- A list of node labels.
   * [/proifle?profile_type="edge"]  -- A list of edge labels.
